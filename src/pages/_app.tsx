@@ -1,9 +1,10 @@
 import Head from "next/head";
-import theme from "../UI/Themes/theme";
-import { GlobalStyle } from "../UI/GlobalStyle/GlobalStyle";
+import { AppProps } from "next/app";
 import { ThemeProvider } from "styled-components";
+import { GlobalStyle } from "../UI/GlobalStyle/GlobalStyle";
+import theme from "../UI/Themes/theme";
 
-function MyApp({ Component, pageProps }) {
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
@@ -14,12 +15,12 @@ function MyApp({ Component, pageProps }) {
           rel="stylesheet"
         />
       </Head>
-      <GlobalStyle />
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
+        <GlobalStyle />
       </ThemeProvider>
     </>
   );
-}
+};
 
 export default MyApp;
