@@ -3,6 +3,7 @@ import { AppProps } from "next/app";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "../UI/GlobalStyle/GlobalStyle";
 import theme from "../UI/Themes/theme";
+import { Header } from "../Components/Header/Header";
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
@@ -16,6 +17,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
         />
       </Head>
       <ThemeProvider theme={theme}>
+        <Header />
         <Component {...pageProps} />
         <GlobalStyle />
       </ThemeProvider>
