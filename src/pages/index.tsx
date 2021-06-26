@@ -56,6 +56,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return {
     props: {
       product,
+      revalidate: 60 * 60 * 24, // 24 hours
     },
   };
 };
