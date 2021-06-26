@@ -35,11 +35,11 @@ export const HeaderContent = styled.div`
       }
 
       &:hover {
-        color: ${({ theme }) => theme.palette.primary.main};
+        color: ${({ theme }) => theme.palette.warning.main};
       }
 
       &.active {
-        color: ${({ theme }) => theme.palette.primary.main};
+        color: ${({ theme }) => theme.palette.warning.main};
         font-weight: 800;
       }
 
@@ -51,7 +51,7 @@ export const HeaderContent = styled.div`
         position: absolute;
         bottom: 1px;
         left: 0;
-        background: ${({ theme }) => theme.palette.primary.main};
+        background: ${({ theme }) => theme.palette.warning.main};
       }
     }
   }

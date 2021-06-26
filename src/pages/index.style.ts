@@ -26,7 +26,7 @@ export const Hero = styled.section`
     margin-top: 2.5rem;
 
     span {
-      color: ${({ theme }) => theme.palette.success.main};
+      color: ${({ theme }) => theme.palette.secondary.dark};
     }
   }
 
@@ -36,7 +36,7 @@ export const Hero = styled.section`
     margin-top: 1.5rem;
 
     span {
-      color: ${({ theme }) => theme.palette.success.main};
+      color: ${({ theme }) => theme.palette.secondary.dark};
       font-weight: bold;
     }
   }
