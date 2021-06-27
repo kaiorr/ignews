@@ -39,7 +39,7 @@ export const HeaderContent = styled.div`
       }
 
       &.active {
-        color: ${({ theme }) => theme.palette.warning.main};
+        border-color: ${({ theme }) => theme.palette.warning.main};
         font-weight: 800;
       }
 
