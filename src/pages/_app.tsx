@@ -4,6 +4,7 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "../UI/GlobalStyle/GlobalStyle";
 import theme from "../UI/Themes/theme";
 import { Header } from "../Components/Header/Header";
+import { Provider as NextAuthProvider } from "next-auth/client";
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
@@ -16,11 +17,13 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
           rel="stylesheet"
         />
       </Head>
-      <ThemeProvider theme={theme}>
-        <Header />
-        <Component {...pageProps} />
-        <GlobalStyle />
-      </ThemeProvider>
+      <NextAuthProvider session={pageProps.session}>
+        <ThemeProvider theme={theme}>
+          <Header />
+          <Component {...pageProps} />
+          <GlobalStyle />
+        </ThemeProvider>
+      </NextAuthProvider>
     </>
   );
 };
